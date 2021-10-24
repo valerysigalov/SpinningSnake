@@ -1,0 +1,163 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {
+            "res/xml/config.xml": {
+                "parents": {
+                    "/*": [
+                        {
+                            "xml": "<feature name=\"Whitelist\"><param name=\"android-package\" value=\"org.apache.cordova.whitelist.WhitelistPlugin\" /><param name=\"onload\" value=\"true\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Game\"><param name=\"android-package\" value=\"com.cranberrygame.cordova.plugin.game.Game\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Device\"><param name=\"android-package\" value=\"org.apache.cordova.device.Device\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"SplashScreen\"><param name=\"android-package\" value=\"org.apache.cordova.splashscreen.SplashScreen\" /><param name=\"onload\" value=\"true\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"ScreenOrientation\"><param name=\"android-package\" value=\"com.tsukurusha.cordova.screenorientation.ScreenOrientation\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"NativeAudio\"><param name=\"android-package\" value=\"com.rjfun.cordova.plugin.nativeaudio.NativeAudio\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"NetworkStatus\"><param name=\"android-package\" value=\"org.apache.cordova.networkinformation.NetworkManager\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"AdMob\"><param name=\"android-package\" value=\"com.rjfun.cordova.admob.AdMobPlugin\" /><param name=\"onload\" value=\"true\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"FacebookAds\"><param name=\"android-package\" value=\"com.rjfun.cordova.facebookads.FacebookAdPlugin\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"AppAvailability\"><param name=\"android-package\" value=\"com.ohh2ahh.appavailability.AppAvailability\" /></feature>",
+                            "count": 1
+                        }
+                    ]
+                }
+            },
+            "AndroidManifest.xml": {
+                "parents": {
+                    "/manifest/application": [
+                        {
+                            "xml": "<meta-data android:name=\"com.google.android.gms.version\" android:value=\"@integer/google_play_services_version\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<meta-data android:name=\"com.google.android.gms.games.APP_ID\" android:value=\"@string/app_id\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<activity android:configChanges=\"keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize\" android:name=\"com.google.android.gms.ads.AdActivity\" android:theme=\"@android:style/Theme.Translucent\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<activity android:configChanges=\"keyboardHidden|orientation|screenSize\" android:name=\"com.facebook.ads.InterstitialAdActivity\" />",
+                            "count": 1
+                        }
+                    ],
+                    "/manifest": [
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.INTERNET\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\" />",
+                            "count": 1
+                        }
+                    ],
+                    "/*": [
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\" />",
+                            "count": 3
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.INTERNET\" />",
+                            "count": 2
+                        }
+                    ]
+                }
+            },
+            "res/values/ids.xml": {
+                "parents": {
+                    "/*": [
+                        {
+                            "xml": "<string name=\"app_id\">replace_app_id</string>",
+                            "count": 1
+                        }
+                    ]
+                }
+            },
+            "config.xml": {
+                "parents": {
+                    "/*": []
+                }
+            }
+        }
+    },
+    "installed_plugins": {
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "replace_pkg_name"
+        },
+        "cordova-plugin-game": {
+            "APP_ID": "replace_app_id",
+            "PACKAGE_NAME": "replace_pkg_name"
+        },
+        "org.apache.cordova.device": {
+            "PACKAGE_NAME": "replace_pkg_name"
+        },
+        "org.apache.cordova.splashscreen": {
+            "PACKAGE_NAME": "replace_pkg_name"
+        },
+        "com.tsukurusha.cordova.screenorientation": {
+            "PACKAGE_NAME": "replace_pkg_name"
+        },
+        "cordova-plugin-nativeaudio": {
+            "PACKAGE_NAME": "replace_pkg_name"
+        },
+        "cordova-plugin-network-information": {
+            "PACKAGE_NAME": "replace_pkg_name"
+        },
+        "cordova-plugin-admobpro": {
+            "PACKAGE_NAME": "replace_pkg_name"
+        },
+        "cordova-plugin-admob-facebook": {
+            "PACKAGE_NAME": "replace_pkg_name"
+        },
+        "cordova-plugin-appavailability": {
+            "PACKAGE_NAME": "replace_pkg_name"
+        }
+    },
+    "dependent_plugins": {
+        "com.google.playservices": {
+            "PACKAGE_NAME": "com.app.killthesnake"
+        },
+        "android.support.v4": {
+            "PACKAGE_NAME": "com.app.killthesnake"
+        },
+        "cordova-plugin-extension": {
+            "PACKAGE_NAME": "replace_pkg_name"
+        },
+        "cordova-facebook-audnet-sdk": {
+            "PACKAGE_NAME": "replace_pkg_name"
+        },
+        "cordova-plugin-facebookads": {
+            "PACKAGE_NAME": "replace_pkg_name"
+        }
+    }
+}

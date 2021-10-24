@@ -1,0 +1,46 @@
+if [[ -z $1 ]]; then
+    echo "Platform name is not specified, it should be android, ios or fireos."
+    exit 1
+else
+    echo "Platform $1."
+fi
+
+cd uglifyjs
+
+sed -i "s/constants.PLATFORM = \"replace\";/constants.PLATFORM = \"$1\";/g" constants.js
+
+sed -i 's/constants.CONTROL = \"replace\";/constants.CONTROL = \"swipe\";/g' constants.js
+
+/usr/local/bin/uglifyjs constants.js gapi.js snake.js --comress sequences,dead_code,conditionals,comparisons,booleans,loops,unused,if_return,join_vars,drop_console --mangle toplevel,eval --mangle-props --reserve-domprops --reserved-file reserved.js --name-cache map --output compiled.js
+
+mv compiled.js ../www/js
+
+sed -i "s/constants.PLATFORM = \"$1\";/constants.PLATFORM = \"replace\";/g" constants.js
+
+sed -i 's/constants.CONTROL = \"swipe\";/constants.CONTROL = \"replace\";/g' constants.js
+
+cd ..
+
+rm -f platforms/android/build/outputs/apk/android-release-unsigned.apk
+
+cp swipe_config.xml config.xml
+
+sed -i 's/replace_app_id/551276867161/g' platforms/android/res/values/ids.xml
+sed -i 's/replace_app_id/551276867161/g' plugins/fetch.json
+sed -i 's/replace_app_id/551276867161/g' plugins/android.json
+sed -i 's/replace_pkg_name/com.game.killthesnake/g' plugins/android.json
+
+if [[ -z $2 ]]; then
+    echo "Build release"
+    cordova build android --release
+else
+    echo "Build debug"
+    cordova build android
+fi
+
+rm config.xml
+
+sed -i 's/551276867161/replace_app_id/g' platforms/android/res/values/ids.xml
+sed -i 's/551276867161/replace_app_id/g' plugins/fetch.json
+sed -i 's/551276867161/replace_app_id/g' plugins/android.json
+sed -i 's/com.game.killthesnake/replace_pkg_name/g' plugins/android.json

@@ -1,0 +1,133 @@
+{
+    "cordova-plugin-whitelist": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-whitelist@1"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-game": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-game"
+        },
+        "is_top_level": true,
+        "variables": {
+            "APP_ID": "replace_app_id"
+        }
+    },
+    "com.google.playservices": {
+        "source": {
+            "type": "registry",
+            "id": "com.google.playservices@21.0.0"
+        },
+        "is_top_level": false,
+        "variables": {}
+    },
+    "android.support.v4": {
+        "source": {
+            "type": "registry",
+            "id": "android.support.v4@1.0.0"
+        },
+        "is_top_level": false,
+        "variables": {}
+    },
+    "org.apache.cordova.device": {
+        "source": {
+            "type": "registry",
+            "id": "org.apache.cordova.device"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "org.apache.cordova.splashscreen": {
+        "source": {
+            "type": "registry",
+            "id": "org.apache.cordova.splashscreen"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "com.tsukurusha.cordova.screenorientation": {
+        "source": {
+            "type": "git",
+            "url": "https://github.com/gitawego/pg-plugin-screen-orientation.git",
+            "subdir": "."
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-file": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-file"
+        },
+        "is_top_level": false,
+        "variables": {}
+    },
+    "cordova-plugin-extension": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-extension"
+        },
+        "is_top_level": false,
+        "variables": {}
+    },
+    "cordova-plugin-nativeaudio": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-nativeaudio"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-facebookads": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-facebookads"
+        },
+        "is_top_level": false,
+        "variables": {}
+    },
+    "cordova-facebook-audnet-sdk": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-facebook-audnet-sdk"
+        },
+        "is_top_level": false,
+        "variables": {}
+    },
+    "cordova-plugin-network-information": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-network-information"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-admobpro": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-admobpro"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-admob-facebook": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-admob-facebook"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-appavailability": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-appavailability"
+        },
+        "is_top_level": true,
+        "variables": {}
+    }
+}

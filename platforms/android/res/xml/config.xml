@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.game.spinningsnake" version="1.2.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <preference name="loglevel" value="DEBUG" />
+    <preference name="SplashScreen" value="splash" />
+    <feature name="Whitelist">
+        <param name="android-package" value="org.apache.cordova.whitelist.WhitelistPlugin" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="Game">
+        <param name="android-package" value="com.cranberrygame.cordova.plugin.game.Game" />
+    </feature>
+    <feature name="Device">
+        <param name="android-package" value="org.apache.cordova.device.Device" />
+    </feature>
+    <feature name="SplashScreen">
+        <param name="android-package" value="org.apache.cordova.splashscreen.SplashScreen" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="ScreenOrientation">
+        <param name="android-package" value="com.tsukurusha.cordova.screenorientation.ScreenOrientation" />
+    </feature>
+    <feature name="NativeAudio">
+        <param name="android-package" value="com.rjfun.cordova.plugin.nativeaudio.NativeAudio" />
+    </feature>
+    <feature name="NetworkStatus">
+        <param name="android-package" value="org.apache.cordova.networkinformation.NetworkManager" />
+    </feature>
+    <feature name="AdMob">
+        <param name="android-package" value="com.rjfun.cordova.admob.AdMobPlugin" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="FacebookAds">
+        <param name="android-package" value="com.rjfun.cordova.facebookads.FacebookAdPlugin" />
+    </feature>
+    <feature name="AppAvailability">
+        <param name="android-package" value="com.ohh2ahh.appavailability.AppAvailability" />
+    </feature>
+    <allow-intent href="market:*" />
+    <preference name="Orientation" value="sensorPortrait" />
+    <icon density="ldpi" src="res/icons/android/tap/ldpi.png" />
+    <icon density="mdpi" src="res/icons/android/tap/mdpi.png" />
+    <icon density="hdpi" src="res/icons/android/tap/hdpi.png" />
+    <icon density="xhdpi" src="res/icons/android/tap/xhdpi.png" />
+    <splash density="ldpi" src="res/icons/android/tap/ldpi.9.png" />
+    <splash density="mdpi" src="res/icons/android/tap/mdpi.9.png" />
+    <splash density="hdpi" src="res/icons/android/tap/hdpi.9.png" />
+    <splash density="xhdpi" src="res/icons/android/tap/xhdpi.9.png" />
+    <name>Spinning Snake</name>
+    <description>
+        The new version of well-known classic snake game
+    </description>
+    <author email="killthesnakegame@gmail.com" href="">
+        5!
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <preference name="SplashScreen" value="screen" />
+    <preference name="SplashScreenDelay" value="30000" />
+    <preference name="AutoHideSplashScreen" value="false" />
+    <preference name="SplashMaintainAspectRatio" value="true" />
+</widget>
