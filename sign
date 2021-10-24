@@ -1,0 +1,10 @@
+sudo jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore release.keystore ~/projects/KillTheSnake/default/platforms/android/build/outputs/apk/android-release-unsigned.apk alias_name
+
+#password:
+#keystore password:
+
+zipalign -f -v 4 platforms/android/build/outputs/apk/android-release-unsigned.apk android-release.apk
+
+git add -A
+git commit -a
+git push origin -u master

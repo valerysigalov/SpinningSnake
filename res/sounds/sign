@@ -1,0 +1,2 @@
+sudo jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore ~/.android/debug.keystore ~/projects/KillTheSnake/default/platforms/android/build/outputs/apk/android-debug.apk androiddebugkey
+

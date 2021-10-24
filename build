@@ -1,0 +1,18 @@
+/usr/local/binuglifyjs index.js constants.js gapi.js snake.js --comress sequences,dead_code,conditionals,comparisons,booleans,loops,unused,if_return,join_vars,drop_console --mangle toplevel,eval --mangle-props --reserve-domprops --reserved-file reserved.js --name-cache map --output compiled.js
+
+cp compiled.js ../www/js
+
+rm -f platforms/android/build/outputs/apk/android-release-unsigned.apk
+
+cordova build android --release
+
+sudo jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore release.keystore ~/projects/KillTheSnake/default/platforms/android/build/outputs/apk/android-release-unsigned.apk alias_name
+
+#password:
+#keystore password:
+
+zipalign -f -v 4 platforms/android/build/outputs/apk/android-release-unsigned.apk android-release.apk
+
+git add -A
+git commit -a
+git push origin -u master
